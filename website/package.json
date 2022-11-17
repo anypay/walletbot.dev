@@ -1,0 +1,77 @@
+{
+  "name": "webbee-js--react-scripts",
+  "author": "maccarian",
+  "email": "hi@maccarianagency.com",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "prettier:fix": "prettier './src/**/*.js' --write",
+    "eslint:fix": "eslint ./src --fix",
+    "clear-all": "rimraf ./build ./node_modules",
+    "deploy": "scp -r build/* root@walletbot.dev:/var/www/walletbot.dev"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/material": "^5.2.4",
+    "aos": "^2.3.4",
+    "clsx": "^1.0.4",
+    "date-fns": "^2.19.0",
+    "formik": "^2.2.6",
+    "history": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-countup": "^6.2.0",
+    "react-dom": "^18.1.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-lazy-load-image-component": "^1.5.4",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-visibility-sensor": "^5.1.1",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^2.0.7",
+    "cross-env": "^7.0.2",
+    "eslint": "^8.15.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "^15.0.0",
+    "prettier-eslint-cli": "^6.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}
