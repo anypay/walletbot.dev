@@ -43,20 +43,20 @@ const Monero = () => {
         <Box marginBottom={4}>
 
           <Typography>
-            Your apps can send Monero payments to one or more recipients using wallet bot by connecting to the Monero Wallet RPC.<br/>
+            Your apps can send Monero (XMR) payments to one or more recipients using <i>Wallet Bot</i>. Wallet Bot does this by connecting to the <i>Monero Wallet RPC</i>.<br/>
           </Typography>
 
         </Box>
 
         <Box marginBottom={4}>
         <Typography>
-        Monero Wallet RPC is a program that you run on your local computer or over a network which manages your Monero payment and view keys. The program stays in sync with the Monero network to provide up to date balance and transaction information to your wallet bot.
+        <b>Monero Wallet RPC</b> is a program that you run on your local computer or over a network. It manages your Monero payments and <i>view keys</i>. The program stays in sync with the Monero network and provides up-to-date <i>balance</i> and <i>transaction</i> information to your Wallet Bot.
       </Typography>
 
         </Box>
       <Box>
         <Typography>
-          Because transactions on Monero are universally private a few more steps are required in order to make and receive payments. We cannot rely on public blockchain providers to give us information about our Monero transactions due to Monero's nature.
+          Traditional public blockchain providers lack the ability to alert users about Monero payments because transactions on the Monero network are universally private. However, with some additional steps, Wallet Bot can make payments and instantly alert users of new payment events.
         </Typography>
       </Box>
       <br/>
@@ -72,7 +72,7 @@ const Monero = () => {
             1. Create Wallet
           </Typography>
           <Typography>
-            The monero wallet RPC software comes bundled with a program called monero-wallet-cli which you will use to generate a new monero wallet. If you already have a monero wallet seed phrase you would like to use you may bring that.
+            The Monero Wallet RPC software comes bundled with a program called <a href="https://www.getmonero.org/downloads/#cli">monero-wallet-cli</a>. Use monero-wallet-cli to generate a new monero wallet. If you already have a pre-existing monero wallet that you would like to use, you can use that wallet by importing its seed phrase.
 
           </Typography>
           <Box marginTop={2}>
@@ -92,7 +92,7 @@ const Monero = () => {
           2. Monero Wallet RPC
         </Typography>
           <Typography>
-            That will prompt you to enter the file name of your wallet. If a wallet with that file name does not exist a new one will be created. Do ensure you save your password in a plain text file that can be used later to easily start and unlock your monero wallet rpc server.
+            That will prompt you to enter the file name of your wallet. If a wallet with that file name does not exist, then a new one will be created. Save your password in a plain text file. The file can be used to easily start and unlock your Monero Wallet RPC server.
           </Typography>
 
           <Box marginTop={2}>
@@ -128,7 +128,7 @@ const Monero = () => {
 
           <Box marginY={2}>{renderCodeBlock('npm install wallet-bot', 'bash')}</Box>
           <Typography>
-          Once Monero Wallet RPC is started up and connected to a fully synced node you should be able to start using it with your wallet bot by connecting the credentials and configuring a new Card on your wallet bot.
+          Once Monero Wallet RPC is started up and connected to a fully synced node, you can start using it with your Wallet Bot. Connect the credentials and configure a new Card on your Wallet Bot.
         </Typography>
             <br/>
           <Box marginY={2}>
@@ -158,12 +158,12 @@ run()`,
         </Box>
         
         <Typography>
-        Your Wallet Bot maintains a number of different wallets with their own separate coin networks and balances through the concept of a Card. A Card represents a single account on a currency or chain. If you have a wallet backup seed phrase or extended private key that works for multiple currencies or multiple accounts you will still be using a single Card instance for each of those accounts, instantiated with the corresponding private key.
+        Your Wallet Bot may maintain a number of different wallets. Each wallet has its own separate coin networks and balances. Wallet Bot calls this concept a <i>Card</i>. A <b>Card</b> represents a single account on a currency or chain. You may have a <i>wallet backup seed phrase</i> or <i>extended private key</i> that works for multiple currencies or multiple accounts. A separate Card instance respresnts each of those accounts. It is instantiated using the corresponding private key.
         </Typography>
         <br/>
 
         <Typography>
-        Wallet Bot fetches its XMR balance directly from your Monero Wallet RPC node since there are no other parties in the world that could tell you your balance without your account view key. If you do give your account view key to a third party they will still have to index your wallet's transaction history. Likely third party services offering such capability will run a Monero Wallet RPC process on your behalf, so that could be substituted here if you can find a Monero Wallet RPC SaaS back end.
+        Wallet Bot fetches its XMR balance directly from your Monero Wallet RPC node. There are no other parties in the world that could tell you your balance without your <i>account view key</i>. If you give your account view key to a third party, they need to index your wallet's transaction history in order to know your balance. Third party services offering such capability will likely run a Monero Wallet RPC process on your behalf. That could be substituted here if you can find a Monero Wallet RPC SaaS back end.
         </Typography>
         <br/>
         <Box marginBottom={4}>
@@ -177,12 +177,12 @@ run()`,
             3. Making Payments
           </Typography>
           <Typography>
-          You may send payments to one or more recipients within a single Monero transaction from your wallet bot by either calling the wallet bot card library directly or by sending it the request via the Wallet Bot API currently hosted at anypayx.com. To send the payment using the wallet bot library directly the bot specifies the JSON Payment Protocol standard format for requesting a payment from your wallet bot.
+          You may send payments to one or more recipients within a single Monero transaction from your Wallet Bot. You can do this by either calling the Wallet Bot <i>card library</i> directly or by sending your Wallet Bot the request via the <b>Wallet Bot API</b> currently hosted at <a href="anypayx.com">AnypayX.com</a>. To send the payment using the Wallet Bot library directly, the bot specifies the JSON Payment Protocol standard format for requesting a payment from your Wallet Bot.
           </Typography>
           <br/>
   
           <Typography>
-          Normally a payment request will contain network information, transaction fee data, and one or more instructions which represent a template from which wallet bot constructs a signed transaction. The template is a list of Monero addresses and amount to send to each address.
+          Payment requests contain network information, data about the transaction fee, and one or more other instructions that follows a template. Wallet Bot uses this information to construct and sign a valid transaction matching all the requirements for a successful payment. The template contains a list of Monero addresses and the amount to send to each address.
           </Typography>
           <br/>
           <Box marginY={2}>{renderCodeBlock(`
@@ -210,12 +210,12 @@ expect(payment.tx_blob).to.be.a('string')
         `, 'typescript')}</Box>
 
         <Typography>
-        When using the Anypay API for Wallet Bot remote clients may request that your wallet bot send a transaction. Anypay will authenticate the original request and then provide the payment request in the form of JSON Payment Protocol URL where the transaction template identical to the one exemplified above will be downloaded from the API and sent.
+        When using the <b>Anypay API</b> for Wallet Bot, remote clients may request that your Wallet Bot send a transaction. Anypay first authenticates the original request. Then it provides the payment request in the form of <i>JSON Payment Protocol URL</i>. A transaction template identical to the one above is downloaded from the API and then sent.
         </Typography>
         <br/>
 
         <Typography>
-        When an application gives you such a Payment Request URL it can be provided directly to the wallet bot in order to send payment using that protocol. The benefit of sending payment via the JSON Payment Protocol comes as the merchant processor can process the transaction much more rapidly, with greater precision, and at much greater scale.
+        When an application gives you one such <i>Payment Request URL</i>, it can be provided directly to the Wallet Bot. Wallet Bot can send the payment using that protocol. One benefit of sending payments via the <i>JSON Payment Protocol</i> is that merchant processors can process transactions much more rapidly, with greater precision, and at much greater scale.
         </Typography>
 
         <Box marginBottom={4}>
@@ -247,7 +247,7 @@ expect(status).to.be.equal('paid')
               },
             }}
           >
-          With Monero Wallet RPC your wallet bot can send Monero payments easily, and by using the Wallet Bot API you can queue up payments to be re-tried when new funds are available. Monero transactions cannot be sent as rapidly as other public transparent blockchains; due to security reasons every transaction must be confirmed before the funds from it can be re-spent bu a subsequent payment. While that does slow down wallet bot a bit the block confirmation time is only two or three minutes so that is currently the rate limit at which we may send payments using wallet bot.
+          With Monero Wallet RPC, your Wallet Bot can send Monero payments easily. By using the Wallet Bot API, you can queue up payments to be retried as new funds become available. Due to Monero's design, Monero transactions cannot be sent as rapidly as other public transparent blockchains. Every Monero transaction in a wallet must be confirmed ten blocks before the funds can be spent in a subsequent payment. While that does slow down Wallet Bot a bit, the Monero <i>block confirmation time</i> is only two or three minutes. That is currently the rate limit at which we may send payments using Wallet Bot. The rate at which Wallet Bot can make new Monero payments increases as your wallet collects more spendable outputs.
           </Typography>
 
         </Box>
