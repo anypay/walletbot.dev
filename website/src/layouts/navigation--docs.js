@@ -49,12 +49,12 @@ export const pages = [
     ],
   },
   {
-    title: 'Client Libraries',
+    title: 'Client Software',
     id: 'clients',
     pages: [
       {
         title: 'Typescript',
-        href: 'https://michalsnik.github.io/aos/',
+        href: 'https://github.com/anypay/wallet-bot',
         target: '_blank',
       }
     ],

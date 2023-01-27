@@ -48,9 +48,7 @@ const Application = ({ themeMode = 'light' }) => {
           ></path>
         </Box>
       </Box>
-      <Container>
-        <Features />
-      </Container>
+
       <Box bgcolor={theme.palette.alternate.main}>
         <Container>
           <Extensions />

@@ -16,9 +16,11 @@ const Home = () => {
       <Container>
         <Highlights />
       </Container>
+      {/*
       <Container>
         <Features />
       </Container>
+      */}
       <Box bgcolor={theme.palette.alternate.main}>
         <Container>
           <DemoPages />

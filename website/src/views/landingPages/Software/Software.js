@@ -20,6 +20,7 @@ const Software = () => {
       <Container>
         <Hero />
       </Container>
+      {/*
       <Container>
         <Features />
       </Container>
@@ -50,6 +51,7 @@ const Software = () => {
           />
         </Box>
       </Box>
+
       <Container>
         <PremiumFeatures />
       </Container>
@@ -57,11 +59,14 @@ const Software = () => {
       <Container>
         <Reviews />
       </Container>
+
       <Box bgcolor={theme.palette.alternate.main}>
         <Container>
           <Partners />
         </Container>
       </Box>
+                        */}
+
     </Box>
   );
 };

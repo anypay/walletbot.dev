@@ -13,6 +13,11 @@ function openGithub() {
   window.open('https://github.com/anypay/wallet-bot', '_blank')
 }
 
+function openDocumentation() {
+
+  window.location = '/docs-introduction'
+}
+
 const Hero = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -82,6 +87,7 @@ const Hero = () => {
             color="primary"
             size="large"
             fullWidth={!isMd}
+            onClick={openDocumentation}
             marginTop={{ xs: 1, sm: 0 }}
             marginLeft={{ sm: 2 }}
           >
