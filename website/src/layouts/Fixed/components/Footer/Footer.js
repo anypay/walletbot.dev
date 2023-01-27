@@ -51,16 +51,7 @@ const Footer = () => (
             </Link>
           </Box>
           <Box marginTop={1}>
-            <Button
-              variant="outlined"
-              color="primary"
-              component="a"
-              target="blank"
-              href="https://material-ui.com/store/items/webbee-landing-page/"
-              size="small"
-            >
-              Purchase now
-            </Button>
+
           </Box>
         </Box>
       </Box>
@@ -80,10 +71,7 @@ const Footer = () => (
         color="textSecondary"
         component={'p'}
       >
-        When you visit or interact with our sites, services or tools, we or our
-        authorised service providers may use cookies for storing information to
-        help provide you with a better, faster and safer experience and for
-        marketing purposes.
+        
       </Typography>
     </Grid>
   </Grid>

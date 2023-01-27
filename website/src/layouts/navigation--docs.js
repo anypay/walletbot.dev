@@ -8,8 +8,8 @@ export const pages = [
         href: '/docs-introduction',
       },
       {
-        title: 'Quick Start',
-        href: '/docs-quick-start',
+        title: 'Webhook Events',
+        href: '/docs-webhooks',
       }
     ],
   },
@@ -17,7 +17,7 @@ export const pages = [
     title: 'Payments',
     id: 'payments',
     pages: [
-      {
+      /*{
         title: 'Bitcoin SV',
         href: '/docs-bsv',
       },
@@ -28,12 +28,12 @@ export const pages = [
       {
         title: 'Bitcoin BTC',
         href: '/docs-bitcoin-btc',
-      },
+      },*/
       {
         title: 'Monero',
         href: '/docs-monero',
       },
-      {
+      /*{
         title: 'Dash',
         href: '/docs-dash',
       },
@@ -44,23 +44,7 @@ export const pages = [
       {
         title: 'Litecoin',
         href: '/docs-litecoin',
-      },
-      {
-        title: 'Solana',
-        href: '/docs-solana',
-      },
-      {
-        title: 'XRP',
-        href: '/docs-xrp',
-      },
-      {
-        title: 'Polygon',
-        href: '/docs-polygon',
-      },
-      {
-        title: 'Ethereum',
-        href: '/docs-ethereum',
-      },
+      }*/
 
     ],
   },
@@ -71,11 +55,6 @@ export const pages = [
       {
         title: 'Typescript',
         href: 'https://michalsnik.github.io/aos/',
-        target: '_blank',
-      },
-      {
-        title: 'C#',
-        href: 'https://formik.org/',
         target: '_blank',
       }
     ],

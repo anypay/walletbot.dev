@@ -11,3 +11,4 @@ export { default as ContainerComponent } from './ContainerComponent';
 export { default as Layouts } from './Layouts';
 export { default as Plugins } from './Plugins';
 export { default as Monero } from './Monero'
+export { default as WebhookEvents } from './WebhookEvents'

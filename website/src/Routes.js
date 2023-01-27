@@ -65,7 +65,8 @@ import {
   Icons as IconsView,
   Illustrations as IllustrationsView,
   ChangeLog as ChangeLogView,
-  Monero as MoneroView
+  Monero as MoneroView,
+  WebhookEvents
 } from './views/docs';
 const Routes = () => {
   return (
@@ -414,6 +415,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={MoneroView}
+            layout={FixedLayout}
+          />
+        ))()}
+      />
+            <Route
+        exact
+        path="/docs-webhooks"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={WebhookEvents}
             layout={FixedLayout}
           />
         ))()}
