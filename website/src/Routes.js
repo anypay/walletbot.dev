@@ -66,7 +66,8 @@ import {
   Illustrations as IllustrationsView,
   ChangeLog as ChangeLogView,
   Monero as MoneroView,
-  WebhookEvents
+  WebhookEvents,
+  USDC as USDCView,
 } from './views/docs';
 const Routes = () => {
   return (
@@ -419,13 +420,23 @@ const Routes = () => {
           />
         ))()}
       />
-            <Route
+      <Route
         exact
         path="/docs-webhooks"
         element={((matchProps) => (
           <WithLayout
             {...matchProps}
             component={WebhookEvents}
+            layout={FixedLayout}
+          />
+        ))()}/>
+        <Route
+        exact
+        path="/docs-usdc"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={USDCView}
             layout={FixedLayout}
           />
         ))()}

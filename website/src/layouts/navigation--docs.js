@@ -14,39 +14,61 @@ export const pages = [
     ],
   },
   {
-    title: 'Payments',
+    title: 'Coin Payments',
     id: 'payments',
     pages: [
-      /*{
-        title: 'Bitcoin SV',
-        href: '/docs-bsv',
-      },
       {
-        title: 'Bitcoin Cash',
-        href: '/docs-bitcoin-cash-bch',
+        title: 'USDC',
+        href: '/docs-usdc',
       },
-      {
-        title: 'Bitcoin BTC',
-        href: '/docs-bitcoin-btc',
-      },*/
       {
         title: 'Monero',
         href: '/docs-monero',
       },
-      /*{
-        title: 'Dash',
-        href: '/docs-dash',
-      },
-      {
-        title: 'Dogecoin',
-        href: '/docs-dogecoin',
-      },
-      {
-        title: 'Litecoin',
-        href: '/docs-litecoin',
-      }*/
 
     ],
+  },
+  {
+    title: 'USDC Payments',
+    id: 'usdc',
+    pages: [
+      {
+        title: 'Ethereum',
+        href: '/docs-usdc-ethereum',
+      },
+      {
+        title: 'Algorand',
+        href: '/docs-usdc-algorand',
+      },
+      {
+        title: 'Solana',
+        href: '/docs-usdc-solana',
+      },
+      {
+        title: 'Stellar',
+        href: '/docs-usdc-stellar',
+      },
+      {
+        title: 'Tron',
+        href: '/docs-usdc-tron',
+      },
+      {
+        title: 'Hedera',
+        href: '/docs-usdc-hedera',
+      },
+      {
+        title: 'Avalanche',
+        href: '/docs-usdc-avalanche',
+      },
+      {
+        title: 'Flow',
+        href: '/docs-usdc-flow',
+      },
+      {
+        title: 'Polygon',
+        href: '/docs-usdc-polygon',
+      },
+    ]
   },
   {
     title: 'Client Software',
